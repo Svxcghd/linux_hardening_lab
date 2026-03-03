@@ -1,10 +1,31 @@
-This section is to explore the basic user and permisions hardening on kali linux
-First of all its very important to know about all the users that are using shell or not and for that i use this command
-    cut -d: -f1 /etc/passwd
-and to know the users that actually using shell or bash i applied this command
-    grep "bin/bash" /etc/passwd
-this help to distinguish between systen users and real login-capable users like sudo or something like that
-A standard user account was created to demonstrate separation of privileges. This account does not have sudo permissions and is intended for non-administrative tasks
-the account doesn´t have access to SUDO commands like LS or APT 
-this exercise help us to know more about the permissions that an account or a user have in a system
-Finally, sensitive system files such as /ETC/SHADOW were reviewed to verify that permissions restrict access to root only proper file permissions are a critical component of Linux security.
+🔐 DOCS USAGE AND PERMISSIONS
+This section focuses on basic user enumeration and permission hardening in Kali Linux.
+
+1️⃣ Identifying System Users
+To list all system accounts:
+cut -d: -f1 /etc/passwd
+To identify users that have an interactive shell (e.g., /bin/bash):
+grep "bin/bash" /etc/passwd
+
+This process helps distinguish between:
+System/service accounts
+Human users with login capabilities
+Understanding which accounts can access the system interactively is essential for security auditing and attack surface reduction.
+
+2️⃣ Privilege Separation
+A standard (non-administrative) user account was created to demonstrate separation of privileges.
+Key characteristics:
+No sudo privileges
+Cannot execute administrative commands
+Intended strictly for non-privileged tasks
+This demonstrates the Principle of Least Privilege (PoLP) — users should only have the permissions strictly necessary to perform their tasks.
+
+3️⃣ Reviewing Critical File Permissions
+Sensitive system files such as:
+/etc/shadow
+were examined to verify that access is restricted exclusively to the root user.
+Proper permission configuration ensures:
+Protection of password hashes
+Prevention of unauthorized access
+Reduced risk of privilege escalation
+Correct file ownership and permission management are fundamental components of Linux system hardening.
