@@ -1,5 +1,17 @@
-This lab was performed using Kali Linux running on a virtual machine configured with VMware. 
-  
-The purpose of this project is not offensive security or exploitation, but rather to apply basic Linux hardening principles on a system that contains multiple preinstalled tools and services.
+# DOCS INTRODUCTIONS:  
+This lab was conducted using Kali Linux running inside a virtual machine configured with VMware.  
+Unlike typical Kali-based projects that focus on offensive security, this lab is strictly defensive. The objective is to apply fundamental Linux hardening techniques to a system that includes multiple preinstalled tools and active services.  
+The project demonstrates how to reduce a system’s attack surface by:  
+Securing user accounts  
+Restricting privileges  
+Controlling active services  
+Limiting network exposure  
+Verifying logging mechanisms  
 
-By securing users, services, network access, and logging, this lab demonstrates defensive security practices that are applicable to any Linux-based environment, including servers and cloud virtual machines.
+By applying these measures, the lab reflects defensive security practices that are directly transferable to:  
+Linux servers  
+Enterprise infrastructures  
+Cloud-based virtual machines  
+Production environments  
+
+This project reinforces the importance of proactive security configuration rather than reactive incident response.  
